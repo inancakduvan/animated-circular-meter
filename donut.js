@@ -9,10 +9,14 @@ function Donut(id, config, callback) {
     this.padding = config.padding ? config.padding : 0;
     this.background_width = this.stroke_width + this.padding;
     this.linecap = config.radius ? "round" : "butt";
-    this.text = config.text ? "block" : "none";
+    this.text = {
+        show: config.text ? config.text.show ? "block" : "none" : "none",
+        color: config.text ? config.text.color ? config.text.color : config.text.color : this.color,
+        font_size: config.text ? config.text.font_size ? config.text.font_size : config.text.font_size : "16px"
+    }
 
     this.template = ' \
-    <div class="svg-item" style="position:relative;"> \
+    <div class="svg-wrapper" style="position:relative;"> \
     <style> \
     .donut-slice { \
         animation: donut 3s; \
@@ -31,7 +35,7 @@ function Donut(id, config, callback) {
           <circle class="donut-slice" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="'+ this.stroke_width +'" stroke="'+ this.color +'" stroke-dasharray="'+ this.val +'" stroke-dashoffset="25" stroke-linecap="'+ this.linecap +'"></circle> \
         </svg> \
                 \
-        <div class="text" style="position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color:'+ config.color +'; display:'+ this.text +'">'+ this.slice_val +'%</div>\
+        <div class="text" style="position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color:'+ this.text.color  +'; font-size: '+ this.text.font_size +'; display:'+ this.text.show  +'">'+ this.slice_val +'%</div>\
       </div> \
     '
 

@@ -5,7 +5,11 @@ var donut = new Donut("chart", {
     stroke_width: 3,
     padding: 1,
     radius: true,
-    text: true
+    text: {
+        show: true,
+        color: "#000",
+        font_size: "24px"
+    }
 }, function(value) {
     console.log(value)
 });
