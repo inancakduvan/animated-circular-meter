@@ -1,4 +1,4 @@
-function Donut(id, config, callback) {
+function AnimatedCircularMeter(id, config, callback) {
     this.slice_val = config.value;
     this.rest_val = (100-config.value);
     this.val = this.slice_val + " " + this.rest_val;
@@ -16,12 +16,12 @@ function Donut(id, config, callback) {
     }
 
     this.template = ' \
-    <div class="svg-wrapper" style="position:relative;"> \
+    <div class="animated-circular-meter-wrapper" style="position:relative;"> \
     <style> \
-    .donut-slice { \
-        animation: donut 3s; \
+    .animated-circular-meter-slice { \
+        animation: animetedCircularMeter 3s; \
     } \
-    @keyframes donut { \
+    @keyframes animetedCircularMeter { \
         0% { \
             stroke-dasharray: 0, 100; \
         } \
@@ -30,12 +30,12 @@ function Donut(id, config, callback) {
         } \
     } \
     </style> \
-        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut" style="margin:0 auto;"> \
-          <circle class="donut-flat" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke="'+ this.background +'" stroke-width="'+ this.background_width  +'"></circle> \
-          <circle class="donut-slice" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="'+ this.stroke_width +'" stroke="'+ this.color +'" stroke-dasharray="'+ this.val +'" stroke-dashoffset="25" stroke-linecap="'+ this.linecap +'"></circle> \
+        <svg width="100%" height="100%" viewBox="0 0 40 40" class="animated-circular-meter" style="margin:0 auto;"> \
+          <circle class="animated-circular-meter-flat" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke="'+ this.background +'" stroke-width="'+ this.background_width  +'"></circle> \
+          <circle class="animated-circular-meter-slice" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="'+ this.stroke_width +'" stroke="'+ this.color +'" stroke-dasharray="'+ this.val +'" stroke-dashoffset="25" stroke-linecap="'+ this.linecap +'"></circle> \
         </svg> \
                 \
-        <div class="text" style="position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color:'+ this.text.color  +'; font-size: '+ this.text.font_size +'; display:'+ this.text.show  +'">'+ this.slice_val +'%</div>\
+        <div class="animated-circular-meter-text" style="position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color:'+ this.text.color  +'; font-size: '+ this.text.font_size +'; display:'+ this.text.show  +'">'+ this.slice_val +'%</div>\
       </div> \
     '
 

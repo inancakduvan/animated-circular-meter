@@ -1,4 +1,4 @@
-var donut = new Donut("chart", {
+var meter = new AnimatedCircularMeter("chart", {
     value: 80,
     color: "#F3C089",
     background: "#eee",
@@ -14,4 +14,4 @@ var donut = new Donut("chart", {
     console.log(value)
 });
 
-donut.draw();
+meter.draw();
