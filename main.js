@@ -1,14 +1,14 @@
 var meter = new AnimatedCircularMeter("chart", {
     value: 80,
-    color: "#F3C089",
-    background: "#eee",
+    color: "#D78AB1",
+    background: "#d9d9d9",
     stroke_width: 3,
     padding: 1,
     radius: true,
     text: {
         show: true,
-        color: "#000",
-        font_size: "24px"
+        color: "#E5507A",
+        font_size: "30px"
     }
 }, function(value) {
     console.log(value)
