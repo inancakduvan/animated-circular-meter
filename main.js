@@ -1,4 +1,4 @@
-donut("chart", {
+var donut = new Donut("chart", {
     value: 80,
     color: "#F3C089",
     background: "#eee",
@@ -9,3 +9,5 @@ donut("chart", {
 }, function(value) {
     console.log(value)
 });
+
+donut.draw();
