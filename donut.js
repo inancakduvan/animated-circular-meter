@@ -31,8 +31,8 @@ function AnimatedCircularMeter(id, config, callback) {
     } \
     </style> \
         <svg width="100%" height="100%" viewBox="0 0 40 40" class="animated-circular-meter" style="margin:0 auto;"> \
-          <circle class="animated-circular-meter-flat" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke="'+ this.background +'" stroke-width="'+ this.background_width  +'"></circle> \
-          <circle class="animated-circular-meter-slice" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="'+ this.stroke_width +'" stroke="'+ this.color +'" stroke-dasharray="'+ this.val +'" stroke-dashoffset="25" stroke-linecap="'+ this.linecap +'"></circle> \
+          <circle class="animated-circular-meter-flat" cx="20" cy="20" r="18" fill="transparent" stroke="'+ this.background +'" stroke-width="'+ this.background_width  +'"></circle> \
+          <circle class="animated-circular-meter-slice" cx="20" cy="20" r="18" fill="transparent" stroke-width="'+ this.stroke_width +'" stroke="'+ this.color +'" stroke-dasharray="'+ this.val +'" stroke-dashoffset="25" stroke-linecap="'+ this.linecap +'"></circle> \
         </svg> \
                 \
         <div class="animated-circular-meter-text" style="position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color:'+ this.text.color  +'; font-size: '+ this.text.font_size +'; display:'+ this.text.show  +'">'+ this.slice_val +'%</div>\
