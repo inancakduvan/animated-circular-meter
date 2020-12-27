@@ -1,4 +1,4 @@
-var meter = new AnimatedCircularMeter("chart", {
+var meter = new AnimatedCircularMeter("meter", {
     value: 80,
     color: "#D78AB1",
     background: "#d9d9d9",
