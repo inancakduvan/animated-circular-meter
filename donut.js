@@ -41,15 +41,3 @@ function donut(id, config, callback) {
         callback(slice_val);
     }
 }
-
-donut("chart", {
-    value: 80,
-    color: "orange",
-    background: "#eee",
-    stroke_width: 3,
-    padding: 1,
-    radius: true,
-    text: true
-}, function(value) {
-    console.log(value)
-});
