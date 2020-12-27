@@ -1,5 +1,6 @@
 var meter = new AnimatedCircularMeter("meter", {
-    value: 80,
+    max: 200,
+    value: 160,
     color: "#D78AB1",
     background: "#d9d9d9",
     stroke_width: 3,

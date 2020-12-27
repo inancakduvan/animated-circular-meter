@@ -1,6 +1,7 @@
 function AnimatedCircularMeter(id, config, callback) {
-    this.slice_val = config.value;
-    this.rest_val = (100-config.value);
+    this.max = config.max ? config.max : 100;
+    this.slice_val = ((config.value / this.max) * 100).toFixed(2);
+    this.rest_val = (100-this.slice_val);
     this.val = this.slice_val + " " + this.rest_val;
 
     this.background =  config.background ? config.background : "#ebebeb";
