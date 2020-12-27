@@ -9,9 +9,10 @@ function donut(id, config, callback) {
     var padding = config.padding ? config.padding : 0;
     var background_width = stroke_width + padding;
     var linecap = config.radius ? "round" : "butt";
+    var text = config.text ? "block" : "none";
 
     var template = ' \
-    <div class="svg-item"> \
+    <div class="svg-item" style="position:relative;"> \
     <style> \
     .donut-slice { \
         animation: donut 3s; \
@@ -29,6 +30,8 @@ function donut(id, config, callback) {
           <circle class="donut-flat" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke="'+ background +'" stroke-width="'+ background_width  +'"></circle> \
           <circle class="donut-slice" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="'+ stroke_width +'" stroke="'+ color +'" stroke-dasharray="'+ val +'" stroke-dashoffset="25" stroke-linecap="'+ linecap +'"></circle> \
         </svg> \
+                \
+        <div class="text" style="position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color:'+ config.color +'; display:'+ text +'">'+ slice_val +'%</div>\
       </div> \
     '
 
@@ -45,7 +48,8 @@ donut("chart", {
     background: "#eee",
     stroke_width: 3,
     padding: 1,
-    radius: true
+    radius: true,
+    text: true
 }, function(value) {
     console.log(value)
 });
