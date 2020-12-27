@@ -39,7 +39,7 @@ function Donut(id, config, callback) {
         document.getElementById(id).innerHTML = this.template;
 
         if(callback) {
-            callback(slice_val);
+            callback(this.slice_val);
         }
     }
 }
