@@ -6,6 +6,8 @@
 
 <p>Demo: https://inancakduvan.github.io/animated-circular-meter/ </p>
 
+<img src="https://raw.githubusercontent.com/inancakduvan/animated-circular-meter/master/images/meter.png" />
+
 # How to use
 
 import Animated Circular Meter at end of your body tag.
