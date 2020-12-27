@@ -1,4 +1,4 @@
-function donut(id, config) {
+function donut(id, config, callback) {
     var slice_val = config.value;
     var rest_val = (100-config.value);
     var val = slice_val + " " + rest_val;
@@ -33,13 +33,19 @@ function donut(id, config) {
     '
 
     document.getElementById(id).innerHTML = template;
+
+    if(callback) {
+        callback(slice_val);
+    }
 }
 
 donut("chart", {
     value: 80,
-    color: "lightgreen",
+    color: "orange",
     background: "#eee",
     stroke_width: 3,
-    padding: 2,
+    padding: 1,
     radius: true
+}, function(value) {
+    console.log(value)
 });
